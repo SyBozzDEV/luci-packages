@@ -1,0 +1,9 @@
+{
+	"admin/services/eduroam": {
+		"title": "Eduroam",
+		"action": {
+			"type": "view",
+			"path": "eduroam/eduroam"
+		}
+	}
+}

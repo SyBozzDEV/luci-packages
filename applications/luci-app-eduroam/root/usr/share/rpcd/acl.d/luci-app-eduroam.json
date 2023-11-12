@@ -1,0 +1,22 @@
+{
+	"luci-app-eduroam": {
+		"description": "Create certificates and config for eduroam from p12 file",
+		"read": {
+			"file": {
+				"/etc/easyroam-certs/*": [ "read" ],
+				"/etc/config/*": [ "read" ],
+				"/tmp/*": [ "read" ]
+			}		},
+		"write": {
+			"file": {
+				"/etc/easyroam-certs/*": [ "write" ],
+				"/etc/config/*": [ "write" ],
+				"/tmp/*": [ "write" ],
+				"/usr/bin/openssl": [ "exec" ],
+				"/bin/mkdir": [ "exec" ],
+				"/bin/mv": [ "exec" ],
+				"/etc/easyroam-certs/create-cert.sh": [ "exec" ]
+			}
+		}
+	}
+}
